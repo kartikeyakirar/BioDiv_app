@@ -1,0 +1,23 @@
+/* CSS file */
+.form-group > label {
+    display: block;
+    font-size: .92857143em;
+    font-weight: 700;
+}
+
+body {
+    background:aliceblue;
+}
+
+.card_cls {
+    border-radius: 0; 
+    width: 100%; 
+    height: 100%;
+    background: #efefef !important
+}
+
+.info_cls {
+    font-size: small;
+    font-style: normal;
+    font-family: cursive;
+}
