@@ -21,6 +21,9 @@ data_dir <- "program/data/"
 support_dir <- "program/functions/"
 module_dir <- "program/modules/"
 
+# Adding resource path for images and logos
+addResourcePath('www', "program/www")
+
 # sourcing supporting files
 source(paste0(support_dir, "support_functions.R"), local = TRUE)
 source(paste0(support_dir, "gridTemplate.R"), local = TRUE)

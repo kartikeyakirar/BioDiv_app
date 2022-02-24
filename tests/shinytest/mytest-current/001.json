@@ -1,0 +1,306 @@
+{
+  "input": {
+    ".clientValue-default-plotlyCrosstalkOpts": {
+      "on": "plotly_click",
+      "persistent": false,
+      "dynamic": false,
+      "selectize": false,
+      "opacityDim": 0.2,
+      "selected": {
+        "opacity": 1
+      },
+      "debounce": 0,
+      "color": [
+
+      ]
+    },
+    "plotly_afterplot-A": "\"ts_species-time_species\"",
+    "shipSelection-sel_species": ""
+  },
+  "output": {
+    "diversity_info-geo_info": {
+      "html": "<div class=\"content\">\n  <div class=\"header\">\n    <div>\n      Geographic\n      <i class=\"map marked icon\"><\/i>\n    <\/div>\n  <\/div>\n  <div class=\"description\"><\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "diversity_info-species_info": {
+      "html": "<div class=\"content\">\n  <div class=\"header\">\n    <div>\n      Species\n      <i class=\"paw icon\"><\/i>\n    <\/div>\n  <\/div>\n  <div class=\"description\"><\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "diversity_info-taxonomy_info": {
+      "html": "<div class=\"content\">\n  <div class=\"header\">\n    <div>\n      Taxonomy\n      <i class=\"list icon\"><\/i>\n    <\/div>\n  <\/div>\n  <div class=\"description\"><\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "map_species-time_species": {
+      "x": {
+        "options": {
+          "crs": {
+            "crsClass": "L.CRS.EPSG3857",
+            "code": null,
+            "proj4def": null,
+            "projectedBounds": null,
+            "options": {
+
+            }
+          }
+        },
+        "calls": [
+          {
+            "method": "addTiles",
+            "args": [
+              "//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+              null,
+              null,
+              {
+                "minZoom": 0,
+                "maxZoom": 18,
+                "tileSize": 256,
+                "subdomains": "abc",
+                "errorTileUrl": "",
+                "tms": false,
+                "noWrap": false,
+                "zoomOffset": 0,
+                "zoomReverse": false,
+                "opacity": 1,
+                "zIndex": 1,
+                "detectRetina": false,
+                "attribution": "&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"
+              }
+            ]
+          },
+          {
+            "method": "addControl",
+            "args": [
+              "<span>Please select species from drop-down to plot occurrences on map<\/span>",
+              "topleft",
+              null,
+              "info legend"
+            ]
+          }
+        ]
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    },
+    "panelElements": {
+      "html": "<style>#lqvzw { display: grid; height: 100%; grid-template-rows: 100px 150px auto; grid-template-columns: 50% 50%; grid-template-areas: 'text text' 'widget widget' 'info_box info_box';  }<\/style>\n<div id=\"lqvzw\">\n  <div id=\"lqvzw-text\" style=\"grid-area: text; padding: 10px\"><div class=\"ui segment\">\n  <p>App plots species occurrence on map and build the timeline for species spotted.<\/p>\n<\/div><\/div>\n  <div id=\"lqvzw-widget\" style=\"grid-area: widget; padding:10px; margin: 5px\"><div class=\"form-group shiny-input-container\" style=\"width:100%;\">\n  <label class=\"control-label\" id=\"shipSelection-sel_species-label\" for=\"shipSelection-sel_species\">Select species<\/label>\n  <div>\n    <select id=\"shipSelection-sel_species\" class=\"form-control\"><\/select>\n    <script type=\"application/json\" data-for=\"shipSelection-sel_species\">{\"plugins\":[\"selectize-plugin-a11y\"]}<\/script>\n  <\/div>\n<\/div><\/div>\n  <div id=\"lqvzw-info_box\" style=\"grid-area: info_box; padding: 10px\"><style>#bhemk { display: grid; height: 100%; grid-template-rows: 100px 100px 100px; grid-template-columns: 100%; grid-template-areas: 'info1' 'info2' 'info3';  }<\/style>\n<div id=\"bhemk\">\n  <div id=\"bhemk-info1\" style=\"grid-area: info1; padding: 5px\"><div class=\"ui card card_cls\">\n  <div id=\"diversity_info-species_info\" class=\"shiny-html-output\"><\/div>\n<\/div><\/div>\n  <div id=\"bhemk-info2\" style=\"grid-area: info2; padding: 5px\"><div class=\"ui card card_cls\">\n  <div id=\"diversity_info-taxonomy_info\" class=\"shiny-html-output\"><\/div>\n<\/div><\/div>\n  <div id=\"bhemk-info3\" style=\"grid-area: info3; padding: 5px\"><div class=\"ui card card_cls\">\n  <div id=\"diversity_info-geo_info\" class=\"shiny-html-output\"><\/div>\n<\/div><\/div>\n<\/div><\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.12.4",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": [
+            "js/selectize.min.js",
+            "accessibility/js/selectize-plugin-a11y.min.js"
+          ],
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "ts_species-time_species": {
+      "x": {
+        "layout": {
+          "margin": {
+            "b": 40,
+            "l": 60,
+            "t": 25,
+            "r": 10
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "showticklabels": false,
+            "showgrid": false,
+            "zeroline": false
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "showticklabels": false,
+            "showgrid": false,
+            "zeroline": false
+          },
+          "title": {
+            "text": "Select species to analyse time series occurrence.",
+            "yref": "paper",
+            "y": 0.5
+          },
+          "hovermode": "closest",
+          "showlegend": false
+        },
+        "source": "A",
+        "config": {
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displayModeBar": false
+        },
+        "data": [
+          {
+            "mode": "markers",
+            "type": "scatter",
+            "marker": {
+              "color": "rgba(31,119,180,1)",
+              "line": {
+                "color": "rgba(31,119,180,1)"
+              }
+            },
+            "error_y": {
+              "color": "rgba(31,119,180,1)"
+            },
+            "error_x": {
+              "color": "rgba(31,119,180,1)"
+            },
+            "line": {
+              "color": "rgba(31,119,180,1)"
+            },
+            "xaxis": "x",
+            "yaxis": "y",
+            "frame": null
+          }
+        ],
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.2,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.1.1",
+          "src": {
+            "href": "crosstalk-1.1.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.5.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.5.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.5.1",
+          "src": {
+            "href": "plotly-main-2.5.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

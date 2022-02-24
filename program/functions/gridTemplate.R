@@ -34,5 +34,5 @@ vboxGrid <- grid_template(
                                  c("info2"),
                                  c("info3")),
                    cols_width = c("100%"),
-                   rows_height = c("150px","150px","150px")
+                   rows_height = c("100px","100px","100px")
     ))

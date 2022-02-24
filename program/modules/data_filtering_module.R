@@ -25,7 +25,6 @@ species_selection_server <- function (input, output, session, dataset) {
                          options = list(valueField = 'value',
                                         labelField = 'value',
                                         searchField = c('label1', 'label2'),
-                                        
                                         create = FALSE,render = I(
                                             "{
             option: function(item, escape) {
@@ -37,7 +36,7 @@ species_selection_server <- function (input, output, session, dataset) {
                item: function(item, escape) { return '<div>' +
                ' <span>' + escape(item.label1) + '</span>' +
                ' <em>{' + escape(item.label2) + '}</em>' +
-               '</div>';},
+               '</div>';}
              }"
                                         )))
     
@@ -46,12 +45,9 @@ species_selection_server <- function (input, output, session, dataset) {
         if (!is.null(input$sel_species) && input$sel_species != "") {
             dat = g_bio_diversity %>%
                 filter(searchName == input$sel_species)
-            
         }
         param(dat)
     })
     
     return(param)
-    
 }
-

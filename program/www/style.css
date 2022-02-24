@@ -11,6 +11,7 @@ body {
 
 .card_cls {
     border-radius: 0; 
+    padding: 5px !important;
     width: 100%; 
     height: 100%;
     background: #efefef !important
@@ -21,3 +22,32 @@ body {
     font-style: normal;
     font-family: cursive;
 }
+
+.cantent {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid rgba(34,36,38,.1);
+    background: 0 0;
+    margin: 0;
+    padding: 1em 1em;
+    box-shadow: none;
+    font-size: 1em;
+    border-radius: 0;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 1.28571429em;
+    margin-top: -.21425em;
+    line-height: 1.28571429em;
+    display: block;
+    margin: '';
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    color: rgba(0,0,0,.85)
+}
+
+.description {
+    clear: both;
+    color: rgba(0,0,0,.68);
+}
+
