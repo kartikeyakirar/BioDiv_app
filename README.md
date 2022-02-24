@@ -10,11 +10,11 @@ This project is developed as appsilon assignment by
 Kartikeya kirar <kirar.kartikeya1@gmail.com>
 
 # Pacakges
-shiny 1.6.0
-shiny.semantic 0.4.3
-semantic.dashboard 0.2.1
-dplyr 1.0.7
-leaflet 2.1.0
-feather 0.3.5
-plotly 4.10.0
-glue 1.4.2
+- shiny 1.6.0
+- shiny.semantic 0.4.3
+- semantic.dashboard 0.2.1
+- dplyr 1.0.7
+- leaflet 2.1.0
+- feather 0.3.5
+- plotly 4.10.0
+- glue 1.4.2
