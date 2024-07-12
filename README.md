@@ -6,7 +6,6 @@ Users can select species by vernacularName or scientificName in drop down widget
 are displayed as options for better understanding.
 
 # Authors
-This project is developed as appsilon assignment by
 Kartikeya kirar <kirar.kartikeya1@gmail.com>
 
 # Pacakges
